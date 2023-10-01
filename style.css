@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.cursor{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: white;
+    z-index: 9;
+    mix-blend-mode: difference;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.purple{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: rgb(255, 201, 255);
+    z-index: 14;
+    opacity: 0;
+    display: none;
+    transition: opacity ease-in 1s;
+}
+
+
+.main{
+    background-color: black;
+    cursor: none;
+}
+
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative ;
+    z-index: 10;
+    padding-top: 12vw;
+
+}
+
+#nav{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 15;
+}
+
+.logo{
+    width: 15%;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#nav #circle{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#nav-part2 h4 a{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.page1 h1{
+    font-size: 9vw;
+    /* font-weight: 300; */
+    margin: 0;
+    margin-left: 10vw;
+    font-family: 'Playfair Display', serif;
+}
+.page1 h2{
+    font-size: 9vw;
+    font-weight: 400;
+    margin-left: 30vw;
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+.page1 video{
+    width: 60%;
+    position: relative;
+    margin-top: 5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Page 2 */
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: white; */
+    padding: 3rem 0;
+    border-bottom: 2px dotted black;
+    position: relative ;
+    z-index: 10;
+}
+
+.page2 h1{
+    font-size: 6vw;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+.page2-container
+{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+.page2-left{
+    width: 40%;
+}
+
+.page2-left h1{
+    font-size: 6vw;
+    font-weight: 100;
+    color: black;
+    text-align: left;
+    line-height: 6vw;
+}
+
+.page2-right{
+    width: 40%;
+}
+
+.page2-right p{
+    font-size: 2vw;
+    font-weight: 200;
+    color: black;
+}
+
+.page2-right button{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(250, 206, 255);
+    color: black;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/* page 3 */
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative ;
+    z-index: 10;
+    padding-top: 4rem;
+}
+
+.page3 h1{
+    font-size: 6vw;
+    color: black;
+    font-weight: 600;
+    margin-left: 4rem;
+}
+
+.page3-part1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.page3-part1 img{
+    width: 35%;
+    margin-top: 6rem;
+}
+
+.page3-part1 video{
+    width: 35%;
+    margin-right: 3rem;
+}
+
+
+.page3-part2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.page3-part2 img{
+    width: 35%;
+    margin-top: 2rem;
+}
+
+.page3-part2 video{
+    margin-top: 6rem;
+    width: 35%;
+    margin-left: 3rem;
+}
+
+/* page 4 */
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative ;
+    z-index: 10;
+    padding: 3rem 3rem;
+    margin-top: 10rem;
+}
+
+.elem{
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* padding: 2rem 0; */
+    margin-bottom: 10px;
+}
+
+.elem h1{
+    font-size: 7vw;
+    transition: all ease-in-out .5s;
+    margin: 2rem 0;
+}
+
+.elem img{
+    position: absolute;
+    width: 30%;
+    opacity: 0;
+    transition: all ease-in-out .5s;
+    transform: translateY(10% ) rotate(2deg);
+}
+
+.elem img:nth-child(1){
+    left: 2%;
+}
+.elem img:nth-child(3){
+    right: 7%;
+}
+
+.elem:hover h1{
+    transform: translateY(-140%);
+    color: rgb(249, 186, 255);
+}
+
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+
+}
+
+.text-div{
+    height: 140px;
+    overflow: hidden ;
+}
+
+
+
+/* page 5 */
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative ;
+    z-index: 10;
+    padding: 3rem 6rem;
+    color: white;
+}
+
+.page5 h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 1rem;
+    border-bottom: 1px dotted rgb(255, 255, 255);
+}
+
+.box h3, .box h4{
+    font-weight: 100;
+    font-size: 1.7vw;
+}
+
+
+
+.footer{
+    height: 30rem;
+    width: 100%;
+    background-color: rgb(248, 203, 252);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.footer .left{
+    width: 50%;
+}
+
+.footer .left h1{
+    font-size: 10vw;
+    font-weight: 400;
+    color: black;
+}
+
+.footer .right{
+    background-color: white;
+    border-radius: 50%;
+    height: 12rem;
+    width: 12rem;
+    padding: 3rem;
+}
+
+.footer .right h3{
+    font-size: 2vw;
+    color: black;
+    text-align: center;
+    margin-top: 20%;
+    cursor: pointer;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding: 1rem;
+    width: 100%;
+    opacity: 0;
+}
+
+form input{
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+form button{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+.empty{
+    height: 53vh;
+    width: 100%;
+}
+
